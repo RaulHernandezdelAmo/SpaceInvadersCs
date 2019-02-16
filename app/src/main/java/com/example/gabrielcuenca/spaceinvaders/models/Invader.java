@@ -101,6 +101,8 @@ public class Invader {
         return xleft;
     }
 
+    public float getDireccion() { return direccion; }
+
     public float getY() {
         return yup;
     }
@@ -133,7 +135,7 @@ public class Invader {
         }else{
             direccion=LEFT;
         }
-        yup = height + yup;
+        yup += height;
     }
 
     public boolean shoot(){
@@ -144,8 +146,13 @@ public class Invader {
         }else{
             return false;
         }
-
     }
+
+    public void setXleft(float x) { this.xleft = x; }
+
+    public void setYup(float y) { this.yup = y; }
+
+    public void setDireccion(int direccion){ this.direccion = direccion;}
 
     public void setImagen(Context context){
         if(colorIncial){
